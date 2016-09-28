@@ -1,0 +1,41 @@
+css3伪类 选择器
+		*:first-child | p:first-child 选择属于父元素的第一个子元素的每个 <p> 元素。
+		*:last-child | p:last-child 选择属于父元素的最后一个子元素的每个 <p> 元素。
+
+		:lang(language) | p:lang(en) 选择带有以 "en" 开头的 lang 属性值的每个 <p> 元素。
+
+		[attribute^=value] | a[src^="https"] 选择其 src 属性值以 "https" 开头的每个 <a> 元素。
+		[attribute$=value] | a[src$=".pdf"] 选择其 src 属性以 ".pdf" 结尾的所有 <a> 元素。
+		[attribute*=value] | a[src*="abc"] 选择其 src 属性中包含 "abc" 子串的每个 <a> 元素。
+
+		:first-of-type | p:first-of-type 选择属于其父元素的首个 <p> 元素的每个 <p> 元素。只要是同类型的标签就会去找我们的第一个标签
+
+		:last-of-type | p:last-of-type 选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+
+		:only-of-type | p:only-of-type 指定属于父元素的特定类型的唯一子元素的每个 p 元素：
+
+		* :nth-child(n) | p:nth-child(2) 选择属于其父元素的第二个子元素的每个 <p> 元素。
+		n是循环增长的 可以通过公式去改变；
+
+		:nth-last-child(n) | p:nth-last-child(2) 同上，从最后一个子元素开始计数。
+
+		:nth-of-type(n) | p:nth-of-type(2) 选择属于其父元素第二个 <p> 元素的每个 <p> 元素。
+		:nth-last-of-type(n) | p:nth-last-of-type(2) 同上，但是从最后一个子元素开始计数。
+		只要是同类型的标签
+
+		:root | :root 选择文档的根元素。
+		:empty | p:empty 选择没有子元素的每个 <p> 元素（包括文本节点）。
+		:target | #news:target 选择当前活动的 #news 元素。
+
+		:enabled | input:enabled 选择每个启用的 <input> 元素。
+		:disabled | input:disabled 选择每个禁用的 <input> 元素。
+
+		:not(selector) | :not(p) 选择非 <p> 元素的每个元素。
+		* ::selection | ::selection 选择被用户选取的元素部分。
+
+	css3伪元素选择器
+		:first-letter | p:first-letter 选择每个 <p> 元素的首字母。
+		:first-line | p:first-line 选择每个 <p> 元素的首行。
+
+		*:before | p:before 在每个 <p> 元素的内容之前插入内容。
+		*:after | p:after 在每个 <p> 元素的内容之后插入内容。
