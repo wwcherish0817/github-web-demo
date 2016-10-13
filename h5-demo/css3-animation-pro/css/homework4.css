@@ -1,0 +1,23 @@
+*{margin: 0;padding:0;}
+.showsnow{width: 980px;height: 500px;background: #ccc;margin: 30px auto;position: relative;overflow: hidden;}
+.snow{position: absolute;}
+@keyframes snowEffect {
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity:0.7;
+    }
+    50%{
+         opacity:0.5;
+     }
+    75%{
+        opacity:0.3;
+    }
+    100%{
+        opacity:0;
+        top: 600px;
+
+
+    }
+}

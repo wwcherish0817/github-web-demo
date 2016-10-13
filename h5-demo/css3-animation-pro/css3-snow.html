@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/homework4.css">
+</head>
+<body>
+    <div class="showsnow" id="showsnow"></div>
+</body>
+<script>
+    var showsnowDom = document.getElementById("showsnow");
+    function snow(imgName,scal,startX,startY){
+        this._snowDiv = document.createElement("div");
+        this._snowImg = document.createElement("img");
+        this.init(imgName,scal,startX,startY);
+        return  this;
+    }
+    snow.prototype={
+        init:function(_imgName,_scal,_startX,_startY){
+            this._snowImg.src="images/"+_imgName;
+            this._snowImg.style.transform="scale("+_scal+","+_scal+")";
+            this._snowDiv.appendChild(this._snowImg);
+            this._snowDiv.className="snow";
+            this._snowDiv.style.left = _startX+"px";
+            this._snowDiv.style.top = _startY+"px";
+       },
+        run:function(ani_name,ani_duration,ani_timing_fun,ani_delay,ani_iteration_count,ani_direction){
+            var str = ani_name+" "+ani_duration+"s "+ani_timing_fun+" "+ani_delay+"s "+ani_iteration_count +" "+ani_direction;
+            var snow = this;
+            var snowDiv = snow._snowDiv;
+            snowDiv.style.animation  = str;
+            var deletTime = (parseInt(ani_duration)+parseInt(ani_delay))*1000;
+            setTimeout(function(){
+                snowDiv.parentNode.removeChild(snowDiv);
+                delete snow;
+            },deletTime);
+        }
+
+    }
+
+    var aniTimingArr=["linear","ease","ease-in","ease-out","ease-in-out"];
+    function createSnow(){
+        var createNum = Math.ceil(Math.random() * 150);
+        for(var i=0;i<createNum;i++){
+            var randScal = Math.random()*0.5;
+            var randPosx = Math.ceil(Math.random() * 980)-80;
+            var randPosY = -(Math.ceil(Math.random() * 100)+200);
+            var sonw = new snow("1.png",randScal,randPosx,randPosY);
+            showsnowDom.appendChild(sonw._snowDiv);
+
+            //--------------------
+            var runTime = Math.random()*15;
+            var timingVal = aniTimingArr[Math.ceil(Math.random() * aniTimingArr.length-1)];
+            var delay = Math.random()*5;
+            sonw.run("snowEffect",runTime,timingVal,delay,1,"normal");
+        }
+    }createSnow();
+    window.onload =function(){
+        setInterval(createSnow,4500);
+    }
+
+</script>
+</html>

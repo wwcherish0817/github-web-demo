@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/homework5.css">
+</head>
+<body>
+    <div class="yugang" id="yugang"></div>
+
+</body>
+<script>
+
+    function Fish(){
+        this._showdiv = document.createElement("div");
+
+    }
+    Fish.prototype={
+        run:function(posX,posY,aniStr,runTime){
+            var fish = this;
+            fish._showdiv.style.left =posX+"px";
+            fish._showdiv.style.top =posY+"px";
+            fish._showdiv.style.animation = aniStr;
+
+            setTimeout(function(){
+                fish._showdiv.parentNode.removeChild(fish._showdiv);
+                delete fish;
+            },runTime*1000);
+        }
+    }
+    function FishTypeOne(){
+        Fish.apply(this,arguments);
+
+    }
+    FishTypeOne.prototype = new Fish();
+    FishTypeOne.prototype.init=function(){
+        this._aniStr = "yu1_effect  0.7s steps(4) infinite,moveEffect 10s linear";
+        this._showdiv.className = "yu1";
+    }
+    function FishTypeTwo(){
+        Fish.apply(this,arguments);
+    }
+    FishTypeTwo.prototype = new Fish();
+    FishTypeTwo.prototype.init=function(){
+        this._aniStr = "yu2_effect  0.7s steps(4) infinite,moveEffect 10s linear";
+        this._showdiv.className = "yu2";
+    }
+
+    var yugang = document.getElementById("yugang");
+    function createFishTypeOne(_posX,_posY)
+    {
+        var fishone = new FishTypeOne();
+        yugang.appendChild(fishone._showdiv);
+        fishone.init();
+        fishone.run(_posX,_posY,fishone._aniStr,10);
+    }
+    function createFishTypeTwo(_posX,_posY)
+    {
+        var fishtwo = new FishTypeTwo();
+        yugang.appendChild(fishtwo._showdiv);
+        fishtwo.init();
+        fishtwo.run(_posX,_posY,fishtwo._aniStr,10);
+    }
+
+
+    var createOneNum= 0,createOneTimeOut=null;
+    function createOne(){
+        if(createOneTimeOut!=null){
+            clearTimeout(createOneTimeOut);
+            createOneTimeOut = null;
+        }
+        if(createOneNum>20){
+            createOneNum = 0;
+            return false;
+        }
+        createOneTimeOut = setTimeout(createOne,500);
+        createFishTypeOne(-100,200);
+        createOneNum++;
+    }createOne();
+
+
+    var createTwoNum= 0,createTwoTimeOut=null;
+    function createTwo(){
+        if(createTwoTimeOut!=null){
+            clearTimeout(createTwoTimeOut);
+            createTwoTimeOut = null;
+        }
+        if(createTwoNum>20){
+            createTwoNum = 0;
+            return false;
+        }
+        createTwoTimeOut = setTimeout(createTwo,500);
+        createFishTypeTwo(-100,300);
+        createTwoNum++;
+    }createTwo();
+
+    function runAni(){
+        window.setInterval(createOne,20000);
+        window.setInterval(createTwo,20000);
+    }runAni();
+</script>
+</html>

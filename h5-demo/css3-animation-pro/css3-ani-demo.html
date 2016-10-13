@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/homework2.css" type="text/css">
+</head>
+<body>
+    <div class="bg">
+        <div class="car" id="car"><img src="images/2.png"></div>
+    </div>
+    <ul>
+        <li>
+            <span>animation-duration(规定完成动画所花费的时间，以秒计)</span>
+            <input type="text" id="animation-duration">
+        </li>
+        <li>
+            <span>animation-timing-function(规定动画的速度曲线。)</span>
+            <input type="radio" value="0" name="animation-timing-function"><span>linear</span>
+            <input type="radio" value="1" name="animation-timing-function"><span>ease</span>
+            <input type="radio" value="2" name="animation-timing-function"><span>ease-in</span>
+            <input type="radio" value="3" name="animation-timing-function"><span>ease-out</span>
+            <input type="radio" value="4" name="animation-timing-function"><span>ease-in-out</span>
+        </li>
+        <li>
+            <span>animation-delay(规定在动画开始之前的延迟)</span>
+            <input type="text" id="animation-delay">
+        </li>
+        <li>
+            <span>animation-iteration-count(规定动画应该播放的次数)</span>
+            <input type="text" id="animation-iteration-count">
+            <input type="checkbox" value="1" name="animation-iteration-count"><span>infinite</span>
+        </li>
+        <li>
+            <span>animation-direction(规定是否应该轮流反向播放动画)</span>
+            <input type="radio" value="0" name="animation-direction"><span>normal</span>
+            <input type="radio" value="1" name="animation-direction"><span>alternate</span>
+        </li>
+        <li>
+            <button class="" onclick="runFun()">Run</button>
+        </li>
+    </ul>
+</body>
+<script>
+        var   toolFun = {
+            getInputVal:function(type,name){
+                var val = null;
+                var obj = document.getElementsByTagName("input");
+                var val = null;
+                for(var i = 0; i < obj.length; i ++)
+                {
+                    //console.log(obj[i].value);
+                    if(obj[i].type==type && obj[i].name==name&& obj[i].checked){
+                        val = obj[i].value;
+                        break;
+                    }
+
+                }
+                return val;
+            }
+        }
+        var aniTimingArr=["linear","ease","ease-in","ease-out","ease-in-out"];
+        var anidirectionArr=["normal","alternate"];
+
+        var   durationVal,timingFunVal,delayVal,iterationCountVal,dirctionVal;
+        var middleTimeOut=null,doneTimeOut=null;
+        var car = document.getElementById("car");
+        function runFun(){
+                if(middleTimeOut!=null && doneTimeOut!=null){
+                    return false;
+                }
+                //获取 规定完成动画所花费的时间
+                var animation_duration_val = document.getElementById("animation-duration").value;
+                if(animation_duration_val == ""){
+                    alert("请选择animation-duration的值");
+                    return false;
+                }
+                else
+                {
+                    durationVal =animation_duration_val;
+                }
+                //获取  动画的速度曲线
+                var  animation_timing_function_Val = toolFun.getInputVal("radio","animation-timing-function");
+                if(animation_timing_function_Val == null){
+                    alert("请选择animation-timing-function的值");
+                    return false;
+                }
+                else
+                {
+                    timingFunVal = aniTimingArr[animation_timing_function_Val];
+                }
+                //动画开始之前的延迟
+                var    animationdelayInputInput = document.getElementById("animation-delay");
+                if(animationdelayInputInput.value ==""){
+                    alert("请选择animation-delay的值");
+                    return false;
+                }
+                else
+                {
+                    delayVal = animationdelayInputInput.value;
+                }
+
+                // 播放的次数
+                var   animation_iteration_count_Val = toolFun.getInputVal("checkbox","animation-iteration-count");
+                var animationIterationCountInput = document.getElementById("animation-iteration-count");
+                if(animation_iteration_count_Val == null){
+                    //用的是自定义
+                    if(animationIterationCountInput.value!="")
+                    {
+                        iterationCountVal = animationIterationCountInput.value;
+                    }
+                    else
+                    {
+                        alert("请选择animation-iteration-count的值");
+                        return false;
+                    }
+                }
+                else
+                {
+                    iterationCountVal="infinite";
+                }
+                var   animation_idirection_Val = toolFun.getInputVal("radio","animation-direction");
+                if (animation_idirection_Val == null){
+                    alert("请选择animation-direction的值");
+                    return false;
+                }
+                else
+                {
+                    dirctionVal = anidirectionArr[animation_idirection_Val];
+                }
+                var str = "CarEffect "+durationVal+"s "+timingFunVal+" "+delayVal+"s "+iterationCountVal +" "+dirctionVal;
+                car.style.animation  = str;
+                var zongTime =(parseInt(durationVal)+parseInt(delayVal))*1000;
+                var middleTime = zongTime/2;
+                middleTimeOut = setTimeout(middleTimeFun,middleTime);
+                doneTimeOut = setTimeout(doneTimeFun,zongTime);
+
+        }
+        function middleTimeFun(){
+
+            car.className =car.className+" dt";
+        }
+        function doneTimeFun(){
+            car.style.animation="";
+            middleTimeOut=null;
+            doneTimeOut = null;
+            car.className = "car";
+        }
+
+</script>
+</html>

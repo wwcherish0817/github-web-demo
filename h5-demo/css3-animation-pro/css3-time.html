@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/homework3.css">
+</head>
+<body>
+    <div class="biao">
+        <span class="char12">12</span>
+        <span class="char1">1</span>
+        <span class="char2">2</span>
+        <span class="char3">3</span>
+        <span class="char4">4</span>
+        <span class="char5">5</span>
+        <span class="char6">6</span>
+        <span class="char7">7</span>
+        <span class="char8">8</span>
+        <span class="char9">9</span>
+        <span class="char10">10</span>
+        <span class="char11">11</span>
+        <div class="zd"></div>
+        <div class="shi" id="shi"></div>
+        <div class="shi fen" id="fen"></div>
+        <div class="shi miao" id="miao"></div>
+    </div>
+</body>
+<script>
+    var shi = document.getElementById("shi");
+    var fen = document.getElementById("fen");
+    var miao = document.getElementById("miao");
+    var miaoNum = 0,shiNum = 0,fenNum = 0,miao_Interval;
+
+    function upData(){
+        var myDate = new Date();
+        shiNum = myDate.getHours() >=12 ?myDate.getHours()-12:myDate.getHours() ;
+        fenNum = myDate.getMinutes();
+        miaoNum = myDate.getSeconds();
+
+        setSFM();
+
+        miao_Interval = setInterval(upDataMiao,1000);
+    }upData();
+    function setSFM(){
+        shi.style.webkitTransform = "rotate("+((shiNum*30)-90)+"deg)";
+        fen.style.webkitTransform = "rotate("+((fenNum*6)-90)+"deg)";
+        miao.style.webkitTransform = "rotate("+((miaoNum*6)-90)+"deg)";
+    }
+    function upDataMiao(){
+        miaoNum++;
+        if(miaoNum>60){
+            clearInterval(miao_Interval);
+            upData();
+            return false;
+        }
+        setSFM();
+    }
+
+</script>
+</html>

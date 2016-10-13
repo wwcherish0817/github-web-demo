@@ -1,0 +1,19 @@
+*{margin: 0;padding: 0;}
+.bg{background: url("../images/1.jpg") 0 0 no-repeat;width: 1000px;height: 553px;margin: 0px auto;position: relative;}
+
+.car{width: 197.4px;height: 109.2px;position: absolute;left: 16px;top: 426px;/**/}
+.car img{width: 100%;height: 100%;}
+ul{ width: 980px;margin: 30px auto;}
+.dt{transform:scaleX(-1);}
+@keyframes  CarEffect {
+    from{
+        left:16px;
+    }
+    50%{
+        left:767px;
+    }
+    to{
+        left:16px;
+    }
+
+}

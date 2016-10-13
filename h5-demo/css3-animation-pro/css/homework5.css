@@ -1,0 +1,46 @@
+*{margin: 0;padding: 0;}
+.yu1{
+    height:36px;
+    width:55px;
+    position: absolute;
+    background:url(../images/fish.png) no-repeat 0 0px;
+    /*-webkit-animation:yu1_effect  0.7s steps(4) infinite;*/
+}
+
+@-webkit-keyframes yu1_effect{
+
+    0%{
+        background-position:0 0px;
+    }
+
+    100%{
+        background-position:0 -144px;
+    }
+
+}
+.yu2{
+    height:36px;
+    width:55px;
+    position: absolute;
+    background:url(../images/fish.png) no-repeat 0 -158px;
+   /* -webkit-animation:yu2_effect  0.7s steps(4) infinite;*/
+}
+@-webkit-keyframes yu2_effect{
+
+    0%{
+        background-position:0 -158px;
+    }
+
+    100%{
+        background-position:0 -302px;
+    }
+}
+
+
+@-webkit-keyframes moveEffect{
+    100%{
+        left: 1100px;
+    }
+}
+.yugang{width: 1024px;margin:  0 auto;overflow: hidden;position: relative;;
+    height: 768px;background: url("../images/game_bg.jpg") 0 0 no-repeat;}
