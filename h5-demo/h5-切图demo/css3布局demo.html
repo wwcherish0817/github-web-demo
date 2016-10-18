@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.first-face{
+				
+				justify-content:center;
+				align-items:center;
+			}
+			.second-face{
+				align-items:center;
+				justify-content: space-around;
+			}
+			.third-face{
+				justify-content: space-around;
+				align-items:center;
+			}
+			.third-face span:first-child{
+				align-self: flex-start;
+			}
+			.third-face span:last-child{
+				align-self: flex-end;
+			}
+			
+			.fourth-face{justify-content: space-around;}
+			.fourth-face .col{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			
+			.fifth-face{justify-content: space-around;}
+			.fifth-face .col{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			
+			.sixth-face{
+				justify-content: space-around;
+			}
+			.sixth-face .col{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+			}
+			
+			
+			.pip{
+				height: 24px;
+				width: 24px;
+				display: block;
+				background: red;
+				border-radius: 50%;
+			}
+			div[class$="face"]{
+				display: flex;
+				height: 104px;
+				width: 104px;
+				border-radius: 10%;
+				border: 1px solid #333333;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="" class="first-face">
+			<span class="pip"></span>
+		</div>
+		<div id="" class="second-face">
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div id="" class="third-face">
+			<span class="pip"></span>
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div id="" class="fourth-face">
+			<div class="col">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="col">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+		<div id="" class="fifth-face">
+			<div class="col">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="col">
+				<span class="pip"></span>
+			</div>
+			<div class="col">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+		<div id="" class="sixth-face">
+			<div class="col">
+				<span class="pip"></span>
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="col">
+				<span class="pip"></span>
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			
+		</div>
+	</body>
+</html>

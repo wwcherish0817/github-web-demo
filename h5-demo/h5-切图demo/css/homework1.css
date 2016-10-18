@@ -1,0 +1,87 @@
+@charset "utf-8";
+body { font-family:微软雅黑, SimHei, Microsoft YaHei, Arial, sans-serif; color:#515151; overflow-x:hidden;background:#FFF;}
+html,body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, del, input, textarea, select, img, dl, dt, dd, ol, ul, li, dfn, em, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, big, font, small, strong, b, center , button { margin: 0; padding: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, mark, audio, video { display: block; margin: 0; padding: 0 }
+h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100% }
+address, cite, dfn, em, var { font-style: normal }
+fieldset, img ,input,a{ border: 0 }
+li { list-style: none }
+table { border-collapse: collapse; border-spacing: 0 }
+a{text-decoration:none;}
+.clear{display:block!important;clear:both;float:none!important;width:auto!important;height:0!important;overflow:hidden;margin:0 auto!important;padding:0!important;font-size:0;line-height:0;height:0px;}
+.floatl{float:left;}
+.floatr{float:right;}
+html{font-size:62.5%; }
+/*高是72px , rem 72/2/10  */
+a{color: #101010;}
+.colorccc{color: #CCC;}
+header{height:2.7rem;line-height: 2.7rem;-webkit-box-orient:horizontal;width: 100%;
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    display: flex;
+    justify-content:space-between;}
+
+header .colorccc{padding-left: 1.15rem;}
+header .lefta{padding-left: 2rem;}
+header .righta{padding-right: 1rem;}
+
+.banner{width: 100%;height:19rem; }
+.banner img{width: 100%;height: 100%;}
+.banner_btn{
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    display: flex;
+    justify-content:center;
+    padding: 1rem 0rem ;
+}
+.banner_btn span{display: inline-block;box-sizing:border-box;width: 0.9rem;height: 0.9rem;border: 2px solid #707070;border-radius: 100% 100%;margin:0rem 0.75rem;}
+.banner_btn span.select{
+    background-color: #f04042;border: none;
+}
+.info{margin: 0 auto;display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    display: flex;padding:0 1rem;
+    justify-content:space-between;font-size: 1.4rem;}
+.info .iconfont{font-size: 1.4rem;}
+
+nav{margin: 0 auto;display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    display: flex;padding:0 1rem;
+    justify-content:center;margin-top: 1.6rem;}
+nav a{width: 11.5rem;box-sizing:border-box;text-align: center;display: inline-block;height: 4.8rem; }
+nav a:nth-child(2){border-left: 1px solid #f0f0f0;border-right: 1px solid #f0f0f0;}
+nav a.select{border-bottom: 1px solid #f14141;}
+nav a div:nth-child(1){font-size: 2.1rem;}
+nav a div:nth-child(2){font-size: 1rem;margin-top: 0.6rem;}
+.itemlist{background: #f0f0f0;padding-top: 1rem ;padding-bottom: 5.3rem;}
+.itemlist li{background: #fff;}
+.itemlist li .inner{width: 95%;margin:  0 auto;border-bottom: 1px solid #ccc;padding-top: 1.15rem;padding-bottom: 2.1rem;}
+.itemlist li .top{display: -webkit-flex; /* Safari */
+    -webkit-justify-content: flex-start; /* Safari 6.1+ */
+    display: flex;
+    justify-content:flex-start;}
+.itemlist li img{width: 5.1rem;height: 5.1rem;}
+.itemlist li .top div{display: inline-block;margin-left: 1.15rem;font-size: 1.3rem;width: 100%;}
+.itemlist li .top div p{height: 2.3rem;line-height: 2.3rem;}
+.itemlist li .top div p:nth-child(1){
+    display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    display: flex;
+    justify-content:space-between;
+}
+.itemlist li  .showinfo{font-size: 0.6rem;color: #b9b9b9;}
+
+.itemlist li .imginfo{height: 22.4rem;width: 100%;margin: 1rem 0;}
+.itemlist li .imginfo img{width: 100%;height: 100%;}
+.itemlist li .bottom{display: -webkit-flex; /* Safari */
+    -webkit-justify-content: space-between; /* Safari 6.1+ */
+    display: flex;
+    justify-content:space-between;}
+.itemlist li .bottom .icon{margin-left: 1.6rem;}
+footer{position: fixed;left: 0;bottom: 0;height: 5.3rem;border-top:1px solid #ccc;width: 100%;background: #fff;display: -webkit-flex; /* Safari */
+    -webkit-justify-content: center; /* Safari 6.1+ */
+    display: flex;
+    justify-content:center;}
+footer div{display: inline-block;width: 48%;text-align: center;height: 100%;}
+footer div p:nth-child(1){font-size: 2rem;height: 3rem;line-height: 3rem;}
+footer div p:nth-child(2){font-size: 1.4rem;}
