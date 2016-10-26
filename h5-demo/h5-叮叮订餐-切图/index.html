@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="index_banner swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/banner1.png"></div>
+            <div class="swiper-slide"><img src="images/banner2.png"></div>
+            <div class="swiper-slide"><img src="images/banner3.jpg"></div>
+            <div class="swiper-slide"><img src="images/banner4.jpg"></div>
+            <div class="swiper-slide"><img src="images/banner6.jpg"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination" ></div>
+    </div>
+    <footer class="index_footer">
+        <div>
+            <span class="icon">叮叮点餐</span>
+        </div>
+        <div>
+            <span class="icon icon2">叮叮点餐</span>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        touchMoveStopPropagation : false,
+        autoplay: 5000,
+        paginationClickable: true
+    });
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body class="feedbackinner">
+    <header class="criterion">
+        <a href="#">&lt;</a>
+        <span class="tit">意见反馈</span>
+        <span ></span>
+    </header>
+    <article class="feedbackcouent">
+        <textarea id="textinfo" >欢迎您给叮叮点餐提供宝贵的意见!</textarea>
+    </article>
+    <button class="feedback_sendbtn">发  送</button>
+</body>
+<script>
+        var   textinfo = document.getElementById("textinfo");
+        var constVal = "欢迎您给叮叮点餐提供宝贵的意见!";
+        textinfo.addEventListener("focus",function(event){
+                 if(this.value == constVal){
+                     textinfo.value = "";
+                 }
+        });
+        textinfo.addEventListener("blur",function(event){
+            if(this.value == ""){
+                textinfo.value = constVal;
+            }
+        });
+
+</script>
+</html>
