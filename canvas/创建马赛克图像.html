@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动脑学院</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	
+	var image = new Image();
+	image.src = "img/3.jpeg";
+
+	
+	image.onload = function(){
+		context.drawImage(image, 0, 0);
+		
+		var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+		var pixels = imageData.data;
+		
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		
+		var numTileRows = 40; 
+		var numTileCols = 40;
+		
+		var tileWidth = imageData.width/numTileCols;
+		var tileHeight = imageData.height/numTileRows;
+		
+		for(var r = 0; r < numTileRows; r++){
+			for(var c = 0; c < numTileCols; c++){
+				var x = (c * tileWidth) + (tileWidth/2);
+				var y = (r * tileWidth) + (tileHeight/2);
+				
+				var pos = (Math.floor(y) * (imageData.width * 4)) + (Math.floor(x) * 4);
+				
+				var red = pixels[pos];
+				var green = pixels[pos + 1];
+				var blue = pixels[pos + 2];
+				
+				context.fillStyle = "rgb(" +red+ ", " +green+ ", "+ blue +" )";
+				//context.fillRect( x - (tileWidth / 2), y - (tileHeight / 2 ), tileWidth,  tileHeight);
+				context.beginPath();
+				context.arc(x, y, tileWidth/2, 0, Math.PI * 2, false);
+				context.closePath();
+				context.fill();
+			}
+		}
+		
+		
+		
+	}
+
+
+</script>
+</html>

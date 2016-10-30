@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动脑学院</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<style type="text/css">
+		*{padding: 0px;margin: 0px;}
+		canvas{background: #333333;}
+		div{position: fixed; left: 20px; top: 20px;}
+		div button{width: 60px; line-height: 30px;background: white; border: none;}
+	</style>
+</head>
+<body>
+	<div class="" id="btn">
+		<button id="start" style="display: none;">start</button>
+		<button id="end">end</button>
+	</div>
+	<canvas id="canvas" width="" height=""></canvas>
+</body>
+<script type="text/javascript">
+	var start = document.getElementById("start");
+	var end = document.getElementById("end");
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	var playAnimation = true;
+	
+
+window.onload = function(){
+	var winWidth = 0; 
+	var winHeight = 0; 
+	function findDimensions(){  //函数：获取尺寸
+		
+		canvas.width = document.body.clientWidth;
+		canvas.height =  window.screen.availHeight;
+	} 
+	findDimensions(); 
+	//调用函数，获取数值 
+	window.onresize = findDimensions;
+	
+	
+	start.onclick = function(){
+		this.style.display = "none";
+		end.style.display = "block";
+		playAnimation = true;
+		animate();
+	}
+	end.onclick = function(){
+		this.style.display = "none";
+		start.style.display = "block";
+		playAnimation = false;
+	}
+	
+	
+	
+	var Shape = function(x, y, w, h){
+		this.x = x;
+		this.y = y;
+		this.w = w;
+		this.h = h;
+		this.radius = Math.random() * 30;
+		this.angle = 0;
+	}
+	var shapes = new Array();
+	for(var i = 0; i<10; i++){
+		var x = Math.random() * canvas.width;
+		var y = Math.random() * canvas.height;
+		
+		var w = h = Math.random() * 100;
+		shapes.push(new Shape(x, y, w, h));
+		
+	}
+	function animate(){
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		context.fillStyle = "#FFFFFF";
+		var shapesLength = shapes.length;
+		for(var i=0; i<shapesLength; i++){
+			var tmpShape = shapes[i];
+			var x = tmpShape.x + tmpShape.radius * Math.cos(tmpShape.angle * (Math.PI / 180));
+			var y = tmpShape.y + tmpShape.radius * Math.sin(tmpShape.angle * (Math.PI / 180));
+			tmpShape.angle += 5;
+			context.fillRect(x, y, tmpShape.w, tmpShape.h);
+		}
+
+		
+		if(playAnimation){
+			setTimeout(animate, 33);
+		}
+	}
+	animate();
+	
+	
+	
+}
+
+</script>
+</html>

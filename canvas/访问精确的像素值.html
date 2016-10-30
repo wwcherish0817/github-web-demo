@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动脑学院</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500"></canvas>
+</body>
+<script type="text/javascript">
+	var canvas = document.getElementById("canvas");
+	var context = canvas.getContext("2d");
+	
+	var image = new Image();
+	image.src = "img/3.jpeg";
+	image.onload = function(){
+		context.drawImage(image, 0, 0, 300, 300);
+		var imageData = context.getImageData(100, 100, 5, 5);
+		var width = imageData.width;
+		var x = 2;
+		var y = 2;
+		
+		
+		var pixelRed = ((y - 1) * (width * 4)) + ((x-1) * 4);
+		var pixelGreen = pixelRed + 1;
+		var pixelBlue = pixelRed + 2;
+		var pixelAlpha = pixelRed + 3;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+
+	
+
+
+
+
+</script>
+</html>
