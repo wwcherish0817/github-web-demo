@@ -1,0 +1,165 @@
+@charset "utf-8";
+body { font:12px/1.5 微软雅黑, SimHei, Microsoft YaHei, Arial, sans-serif; color:#515151; overflow-x:hidden;background:#FFF;}
+html,body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, a, del, input, textarea, select, img, dl, dt, dd, ol, ul, li, dfn, em, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, big, font, small, strong, b, center , button { margin: 0; padding: 0 }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, mark, audio, video { display: block; margin: 0; padding: 0 }
+h1, h2, h3, h4, h5, h6, button, input, select, textarea { font-size: 100% }
+address, cite, dfn, em, var { font-style: normal }
+fieldset, img ,input,a{ border: 0 }
+li { list-style: none }
+table { border-collapse: collapse; border-spacing: 0 }
+a{text-decoration:none;}
+.clear{display:block!important;clear:both;float:none!important;width:auto!important;height:0!important;overflow:hidden;margin:0 auto!important;padding:0!important;font-size:0;line-height:0;height:0px;}
+.floatl{float:left;}
+.floatr{float:right;}
+
+nav .row div{text-align: center;background-color:#000000;;display: inline-block; height: 100%;}
+nav .row div.select{background-color:red;}
+nav .row div p{width: 100%;text-align: center;line-height: 3.5em;height: 1.5em;}
+nav .row div p img{display: inline-block}
+nav .row div a{color:#FFFFFF}
+nav.navbar{
+    height: 3em;background-color: #000;}
+div.gg_count{width: 100%;
+    height: 30%;}
+div.gg_count img{width: 100%; height: 100%;}
+div.gg_count2{width: 100%;
+    height: 12em;margin-top: 3em;}
+div.gg_count2 img{width: 100%; height: 12em;}
+div.scroll_x_info{width: auto;height: 3em;overflow-y: hidden;overflow-x: hidden;}
+div.scroll_x_info p{
+    height: 3em;width: auto;white-space:nowrap;font-size: 1.5em;line-height: 1.5em;}
+div.gn_count1{margin-top: 7%;}
+div.gn_count1 a{margin: 0px auto;display: block;}
+div.buyvip_info_count{width: 100%;
+    height: 100%;background:url("../imagine/bg2.png") 0 0 repeat;
+    padding-top: 3%;}
+.buyvip_header{width: 10em;
+    height: 15%;margin: 0em auto;text-align: center;}
+.buyvip_header img{width: auto;height: 100%;margin: 0 auto;}
+.userInfo{text-align: center;color: #ffffff;margin-top: 3%;font-size: 1.5em;}
+.buyvip_vipinfo1{margin: 3em 0 0;padding: 0;}
+.buyvip_vipinfo1_inner{color: #080808;background-color: #f5f5f5;text-align: center;
+border-radius: 0.3em;font-size: 1.2em;padding:0.5em 0;}
+.buyvip_btn_list li{text-align: center;margin-top: 2em;}
+.buyvip_btn_list li a{padding:0.5em 1em; }
+.buyvip_vipinfo2{width: 90%;margin: 0 5%;margin-top: 3em;}
+.buyvip_vipinfo4{margin-top: 1em;overflow-x: hidden;overflow-y: scroll;height: 20%;
+    font-size: 1.5em;color: #FFFFFF;}
+.vipcenter_info_count .myinfo{
+    width: 100%;height: 30%;background:url("../imagine/bg2.png") 0 0 repeat;margin: 0;padding: 0;}
+.vipcenter_info_count .myinfo_count1,.vipcenter_info_count .myinfo_count2{
+    ;width: 100%;margin: 0;padding: 0;overflow: hidden;}
+.vipcenter_info_count .myinfo_count1{height: 70%;}
+.vipcenter_info_count .myinfo_count1 .myinfo_count1_inner{height: 100%;width: 60%;margin: 0 auto;}
+.vipcenter_info_count .myinfo_count1 .myinfo_count1_inner .myinfo_count1_inner_d1{height: 100%;
+    width: 40%;  position: relative;;
+    }
+.vipcenter_info_count .myinfo_count1 .myinfo_count1_inner .myinfo_count1_inner_d1 div{
+    width: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+}
+.vipcenter_info_count .myinfo_count1 .myinfo_count1_inner .myinfo_count1_inner_d1 img{height: 60%;
+    float: right;}
+
+.vipcenter_info_count .myinfo_count2{height: 30%;background: url("../imagine/bg1.png") 0 0 repeat;color: #fff;
+    text-align: center;}
+.vipcenter_info_count .myinfo_count2 div{height: 100%;}
+.vipcenter_info_count .myinfo_count2 p{font-size: 1.2em;}
+.vipcenter_info_count .myinfo_count1 .headdiv{padding: 0;margin-top: 5%;}
+.vipcenter_info_count .myinfo_count1 .headdiv img{width: 20%;height: 100%;}
+.vipcenter_info_count .myinfo_count1 .info{color: #fff;height: 100%;width: 60%;
+    position: relative;}
+.vipcenter_info_count .myinfo_count1 .info ul{display: block;padding: 0;
+    background-color: transparent; ;box-shadow: none;width: 100%;
+    -webkit-box-shadow: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(0%, -50%);}
+.vipcenter_info_count .myinfo_count2 .info{color: #fff;height: 100%;position: relative;}
+.vipcenter_info_count .myinfo_count2 .info ul{
+    display: block;padding: 0;
+    background-color: transparent; ;box-shadow: none;width: 100%;
+    -webkit-box-shadow: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%, -50%);
+}
+.vipcenter_info_count .myinfo_count2 .info ul li{text-align: center;font-size: 1.1em;}
+.vipcenter_info_count .myinfo_count1 .info li{font-size: 1.0em;}
+.vipcenter_info_count .navbar{
+    height: 12%;   margin-bottom: 0; margin-top: 3%;
+   }
+.vipcenter_info_count .navbar ,.vipcenter_info_count .navbar .row {border: 1px solid #fff;background-color: #fff; }
+.vipcenter_info_count nav .row div{background-color: #fff;border: 1px solid #fff;padding: 0;
+
+}
+.vipcenter_info_count nav .row div a{width: 100%;height: 100%;display: inline-block;position: relative;;}
+.vipcenter_info_count nav .row div ul{
+    width: 100%;height: 100%;float: none;
+    display: block;padding: 0;margin: 0;
+    background-color: transparent; ;box-shadow: none;width: 100%;
+    -webkit-box-shadow: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    min-width: 100%;
+}
+.vipcenter_info_count nav .row div ul li{text-align: center;width: 100%;}
+.vipcenter_info_count nav .row div ul li img{margin: 0 auto;}
+.vipcenter_info_count  nav .row div p{text-align: center;}
+.vipcenter_info_count nav .row div a {color: #080808;}
+.vipcenter_info_count  nav .row div p.p1{height: 50%;}
+.vipcenter_info_count  nav .row div p.p2{height: 50%;}
+.vipcenter_info_count .usermore{height: 40%;width: 100%;
+    overflow-x: hidden;overflow-y: scroll;}
+.vipcenter_info_count #vipmoveInfoOne li,.vipcenter_info_count #vipmoveInfoTwo li,.vipcenter_info_count #vipmoveInfoThree li{padding: 0.3em;}
+.offlinetccount1 {width: 100%;height:42%; overflow-x: hidden;overflow-y: scroll;margin-top: 5%;}
+.offlinetccount1 p.p1{font-size: 1em;color: #d4d4d4;}
+.offlinetccount1 p.p2{font-size: 1.2em;
+    color: #000;}
+.helpcount{text-align: center;}
+.helpcount a.list-group-item{color: darkblue;font-size: 1.5em;
+    border: none;}
+.applywidthCount .list-group-item ,.applywidthCount .input-group-addon{font-size: 1.2em;}
+.applywidthCount label{color: red;display: inline-block;margin-right: 3%;}
+.applywidthCount ul li span{background-color: transparent;border: none;}
+.applywidthCount ul li div{width: 100%;}
+.applywidthCount ul li input.form-control{width: auto;float: right;width: 50%;}
+.myordercouent_1{
+    background-color: #f5f5f5;;
+    font-size: 1.2em; position: relative;
+    height: 5%;
+   }
+.myordercouent_1 a{position: absolute;top: 50%;
+    left: 5%;font-size: 0.8em;color: #53B3EF;z-index: 99;
+    transform: translate(0%, -50%);}
+.myordercouent_1_div{position: relative;height: 100%}
+.myordercouent_1_div span{
+    position: absolute;top: 50%;
+    left:0;font-size: 0.8em;color: #53B3EF;
+    transform: translate(0%, -50%);
+    width: 100%;text-align: center;
+    color: #080808;
+}
+.myordercouent_2 {font-size: 1.1em;}
+.myordercouent_2 div{text-align: center;padding: 1% 0;}
+.myordercouent_2 div a{color: #080808;}
+.myordercouent_2 div.select{border-bottom: 1px solid #0894EC;color: #0894EC;}
+.myordercouent_2 div a.select{border: none;color: #0894EC;}
+.myordercouent_3{background-color:#E6E6E6;width: 100%;height: 90%;overflow-y: scroll;
+    overflow-x: hidden;}
+.myordercouent_3 .d1{font-size: 1.1em;}
+.myordercouent_3 .input-group-addon{border: none;background-color: transparent;padding-left: 0;
+    padding-right: 0;font-size: 1em;}
+.myordercouent_3 .list-group{margin-bottom: 0;}
+.myordercouent_3 .list-group-item{margin-bottom: 2%;}
